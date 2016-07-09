@@ -1,7 +1,7 @@
 {
   "name": "ember-ignore-children-helper",
   "version": "1.0.0",
-  "description": "Helper for filtering out events that didn't directly target your own element.",
+  "description": "Helps you ignore events that didn't directly target your own element.",
   "directories": {
     "doc": "doc",
     "test": "tests"
