@@ -1,0 +1,9 @@
+.outer {
+    padding: 4em;
+    background-color: #aaffaa;
+}
+
+.inner {
+    padding: 2em;
+    background-color: #aaaaff;
+}

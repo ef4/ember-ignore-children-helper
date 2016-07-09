@@ -1,7 +1,7 @@
 {
   "name": "ember-ignore-children-helper",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "Helper for filtering out events that didn't directly target your own element.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/ef4/ember-ignore-children-helper",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -36,11 +36,14 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
-    "ember-welcome-page": "^1.0.1",
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "helper",
+    "events",
+    "children",
+    "self"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6"

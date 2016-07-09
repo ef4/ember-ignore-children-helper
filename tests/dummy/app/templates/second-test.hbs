@@ -1,0 +1,5 @@
+<div class="counter">{{counter}}</div>
+<div class="outer" onclick={{action (action (ignore-children incrementCounter) 42) }}>
+  Clicks in this area will increment the counter.
+  <div class="inner">Clicks in this area will not.</div>
+</div>
