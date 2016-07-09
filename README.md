@@ -1,26 +1,31 @@
-# Ember-ignore-children-helper
+# ignore-children
 
-This README outlines the details of collaborating on this Ember addon.
+_No actual children were neglected in the making of this addon._
+
+This Ember addon provides a single helper named `ignore-children`. It lets you declare an event handler that will only fire for events that _directly_ target the given element. Events from its children will be ignored.
+
+For example, assume that `your-component` accepts an action named `doSomething`:
+
+```hbs
+{{your-component doSomething=(action "alrightyThen")}}
+```
+
+Then within `your-component.hbs`, you can say:
+
+```hbs
+{{!- your-component.hbs }}
+<div class="outer" onclick={{action (ignore-children doSomething) }}>
+  Clicks in this area will cause "doSomething" to be called.
+  <div class="inner">But clicks in this area will not! ignore-children is blocking them for us.</div>
+</div>
+```
+
+See tests/dummy/app/index.hbs for a working example you can play with.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`ember install ember-ignore-children-helper`
 
-## Running
+## Running, Testing, etc
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+Standard ember addon conventions apply. In this repo, `ember s` will run the included dummy app and `ember test` will run the test suite.
