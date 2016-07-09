@@ -13,7 +13,6 @@ For example, assume that `your-component` accepts an action named `doSomething`:
 Then within `your-component.hbs`, you can say:
 
 ```hbs
-{{!- your-component.hbs }}
 <div class="outer" onclick={{action (ignore-children doSomething) }}>
   Clicks in this area will cause "doSomething" to be called.
   <div class="inner">But clicks in this area will not! ignore-children is blocking them for us.</div>
